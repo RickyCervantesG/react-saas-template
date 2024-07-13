@@ -1,14 +1,12 @@
 import React, { memo } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { AppBar, Toolbar, Typography, Button, Hidden, IconButton } from "@mui/material";
+import { AppBar, Toolbar, Button, Hidden, IconButton } from "@mui/material";
 import withStyles from '@mui/styles/withStyles';
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
-import HowToRegIcon from "@mui/icons-material/HowToReg";
-import LockOpenIcon from "@mui/icons-material/LockOpen";
-import BookIcon from "@mui/icons-material/Book";
 import NavigationDrawer from "../../../shared/components/NavigationDrawer";
+import logoName from "../../../public/images/navigation/Trout.svg"
 
 const styles = theme => ({
   appBar: {
@@ -24,8 +22,8 @@ const styles = theme => ({
     fontWeight: theme.typography.h6.fontWeight
   },
   brandText: {
-    fontFamily: "'Baloo Bhaijaan', cursive",
-    fontWeight: 400
+    fontFamily: "'', cursive",
+    fontWeight: 200
   },
   noDecoration: {
     textDecoration: "none !important"
@@ -35,8 +33,6 @@ const styles = theme => ({
 function NavBar(props) {
   const {
     classes,
-    openRegisterDialog,
-    openLoginDialog,
     handleMobileDrawerOpen,
     handleMobileDrawerClose,
     mobileDrawerOpen,
@@ -55,22 +51,14 @@ function NavBar(props) {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <div>
-            <Typography
-              variant="h4"
-              className={classes.brandText}
+            <img
+              alt = "Trout Logo"
+              href = {logoName}
+              // className={classes}
               display="inline"
-              color="primary"
-            >
-              Wa
-            </Typography>
-            <Typography
-              variant="h4"
-              className={classes.brandText}
-              display="inline"
-              color="secondary"
-            >
-              Ver
-            </Typography>
+              
+            />
+             
           </div>
           <div>
             <Hidden mdUp>
