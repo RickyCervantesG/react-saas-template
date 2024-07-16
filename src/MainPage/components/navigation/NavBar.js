@@ -6,7 +6,8 @@ import withStyles from '@mui/styles/withStyles';
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import NavigationDrawer from "../../../shared/components/NavigationDrawer";
-import logoName from "../../../public/images/navigation/Trout.svg"
+import SvgIcon from "@mui/icons-material"
+// import logoName from "/images/navigation/Trout.svg"
 
 const styles = theme => ({
   appBar: {
@@ -21,13 +22,16 @@ const styles = theme => ({
     fontSize: theme.typography.body1.fontSize,
     fontWeight: theme.typography.h6.fontWeight
   },
-  brandText: {
-    fontFamily: "'', cursive",
-    fontWeight: 200
+
+  logoBrand : {
+    width: 300
+
   },
+ 
   noDecoration: {
     textDecoration: "none !important"
   }
+
 });
 
 function NavBar(props) {
@@ -50,16 +54,13 @@ function NavBar(props) {
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
+          
           <div>
-            <img
-              alt = "Trout Logo"
-              href = {logoName}
-              // className={classes}
-              display="inline"
-              
-            />
+          <a href = "/">
+          {/* <SvgIcon component = {logoName} /> */}
+            </a>
+            </div>
              
-          </div>
           <div>
             <Hidden mdUp>
               <IconButton
